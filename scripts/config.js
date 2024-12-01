@@ -12,6 +12,7 @@ addEventListener("scroll", () => {
   }
 });
 
+// Kiểm tra tình trạng người dùng để hiển thị giỏ hàng và user hiện tại.
 window.handleSignOut = () => {
   localStorage.removeItem("currentUser");
   localStorage.removeItem("cart");
@@ -20,6 +21,7 @@ window.handleSignOut = () => {
 
 window.signIn = () => {};
 
+//// Nếu người dùng đăng đăng nhập.
 if (localStorage.getItem("currentUser")) {
   document.querySelector("#avatar-action-container").innerHTML += /*html*/ `
     <div tabindex="0" class="avatar-action">
@@ -42,6 +44,8 @@ if (localStorage.getItem("currentUser")) {
   `;
 }
 
+
+///// Lập trình giao diện hiển thị chatbot.
 document.body.innerHTML += /*html*/ `
   <button class="chatbot-toggler">
     <span class="material-symbols-rounded">mode_comment</span>
