@@ -89,8 +89,10 @@ const labels = ["data", "similar"];
       .join("")} 
   `;
 
+  
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
+  ///// Lập trình tính năng comment trong trang
   document.querySelector("#comment-box-container").innerHTML = /*html*/ `
   <form ${
     !user ? 'style="cursor: pointer" onclick="signIn()"' : ""
